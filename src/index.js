@@ -3,9 +3,9 @@
 require('./db/mongoose');
 const express = require('express');
 const app = express();
-const port = 3001;
+//const port = 3001;
 const Dish = require('./model/dishes');
-
+const port=process.env.PORT || 3001 //el puerto estara seteado en la varDeEntorno
 app.use(express.json());
 
 // Read-- Mostrar todos los platos
